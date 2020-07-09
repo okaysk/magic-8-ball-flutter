@@ -39,15 +39,29 @@ class _BallState extends State<Ball> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: FlatButton(
-        onPressed: () {
-          changeTheBall();
-          print('$ballNumber');
-        },
-        child: Image.asset('images/ball$ballNumber.png'),
-      ),
-      // child: Text('Hello'),
+    return Column(
+      children: <Widget>[
+        Container(
+          width: double.infinity,
+          height: 150.0,
+          color: Colors.lightBlue[50],
+        ),
+        Center(
+          child: FlatButton(
+            onPressed: () {
+              changeTheBall();
+              print('$ballNumber');
+            },
+            child: Image.asset('images/ball$ballNumber.png'),
+          ),
+          // child: Text('Hello'),
+        ),
+        Container(
+          width: double.infinity,
+          height: 130.0,
+          color: Colors.lightBlue[200],
+        ),
+      ],
     );
   }
 }
